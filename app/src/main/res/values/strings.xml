@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Ventas app</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main"></string>
+    <string name="listado_de_alumnos">Listado de clientes</string>
+    <string-array name="alumnos">
+        <item>Baldomero</item>
+        <item>Gervasio</item>
+        <item>Filomeno</item>
+        <item>Prudencio</item>
+        <item>Casimiro</item>
+        <item>Fulgencio</item>
+        <item>Genaro</item>
+        <item>Rigoberto</item>
+        <item>Atanasio</item>
+        <item>Baldomero2</item>
+        <item>Gervasio3</item>
+        <item>Filomeno4</item>
+        <item>Prudencio5</item>
+        <item>Casimiro6</item>
+        <item>Fulgencio7</item>
+        <item>Genaro8</item>
+        <item>Rigoberto9</item>
+        <item>Atanasio10</item>
+    </string-array>
+    <string name="ha_pulsado_sobre">"Ha pulsado sobre "</string>
+    <string name="editar">"Editar "</string>
+    <string name="eliminar">"Eliminar "</string>
+    <string name="elija_una_opcion">Elija una opción</string>
+</resources>
