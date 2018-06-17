@@ -28,7 +28,7 @@
             android:label=" "
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Entities.MenuContextualClientes"
+            android:name=".MenusContextuales.MenuContextualClientes"
             android:label=" "
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
