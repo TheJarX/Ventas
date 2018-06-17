@@ -7,7 +7,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.administrador.myapplication.Entities.MenuContextualClientes;
+import com.example.administrador.myapplication.MenusContextuales.MenuContextualClientes;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void Listar(View v){
-        Intent i = new Intent(getApplicationContext(), MenuContextualClientes.class);
+        Intent i = new Intent(getApplicationContext(),MenuContextualClientes.class);
 
         startActivity(i);
 
