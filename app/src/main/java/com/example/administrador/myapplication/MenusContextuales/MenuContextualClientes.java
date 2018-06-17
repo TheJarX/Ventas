@@ -1,4 +1,4 @@
-package com.example.administrador.myapplication.Entities;
+package com.example.administrador.myapplication.MenusContextuales;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -17,6 +17,18 @@ import com.example.administrador.myapplication.Dialogo;
 import com.example.administrador.myapplication.R;
 
 public class MenuContextualClientes extends Activity {
+    private ListView lstAlumnos;
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+
+        getVistas();
+    }
+
+    //Instanciando el Diálogo
 
     public void DialogAlert(){
 
@@ -27,19 +39,8 @@ public class MenuContextualClientes extends Activity {
         dialogo.show(fg,"alerta");
     }
 
-    // Variables a nivel de clase.
-    private ListView lstAlumnos;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        // Llamo al onCreate del padre.
-        super.onCreate(savedInstanceState);
-        // Establezco el layout que mostrará la actividad.
-        setContentView(R.layout.main);
-        // Obtengo la referencia a las vistas.
-        getVistas();
-    }
-
+        //Obtengo los datos de la tabla
     private void getVistas() {
         lstAlumnos = (ListView) findViewById(R.id.lstAlumnos);
         // Obtengo los datos para el adaptador de la lista.
@@ -54,8 +55,9 @@ public class MenuContextualClientes extends Activity {
             public void onItemClick(AdapterView<?> lst, View vistafila,
                                     int posicion, long id) {
                 // Informo al usuario sobre que alumno ha pulsado.
-                mostrarTostada(getString(R.string.ha_pulsado_sobre) +
-                        lst.getItemAtPosition(posicion));
+                Toast.makeText(getApplicationContext(),
+                        "Ha pulsado sobre "+lst.getItemAtPosition(posicion),
+                        Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getApplicationContext(), DetallesCliente.class);
                 startActivity(i);
             }
@@ -108,10 +110,7 @@ public class MenuContextualClientes extends Activity {
         return true;
     }
 
-    // Muestra una tostada.
-    private void mostrarTostada(String mensaje) {
-        Toast.makeText(getApplicationContext(), mensaje, Toast.LENGTH_SHORT).show();
-    }
+
 
 
 }
