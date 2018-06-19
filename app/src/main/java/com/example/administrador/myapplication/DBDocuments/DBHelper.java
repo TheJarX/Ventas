@@ -48,18 +48,22 @@ public class DBHelper extends SQLiteOpenHelper {
             +Contract.DetailsEntry.SALE_ID+" INTEGER PRIMARY KEY, "
             +Contract.DetailsEntry.DATE+" TEXT NOT NULL, "
             +Contract.DetailsEntry.CLIENT_ID+" INT NOT NUll, "
-            +"FOREIGN KEY ( "
+            +" FOREIGN KEY ( "
             + Contract.DetailsEntry.SALE_ID
-            + Contract.DetailsEntry.CLIENT_ID
             +" ) REFERENCES "
             + Contract.SaleEntry.TABLE_NAME
-            +" , "
-            + Contract.ClientEntry.TABLE_NAME
-            +" ("
+            +" ( "
             + Contract.SaleEntry.SALE_ID
-            +" , "
+            +" ),"
+            +" FOREIGN KEY ("
+            + Contract.DetailsEntry.CLIENT_ID
+            +") REFERENCES "
+            +Contract.ClientEntry.TABLE_NAME
+            +"("
             + Contract.ClientEntry.CLIENT_ID
-            +" )";
+            +") )";
+
+
 
     private static final String DROP_CLIENT_SQL = "DROP TABLE IF EXISTS "
             + Contract.ClientEntry.TABLE_NAME;
